@@ -1,0 +1,5 @@
+interface:
+  display_name: "Pickupskill"
+  short_description: "谨慎整理混乱文件夹：先盘点、保护项目包、浅层归类、不默认删除、低置信度进待判定区"
+  default_prompt: "Use Pickupskill to cautiously organize a messy working folder. Scan loose files first, protect project packages, keep folder depth shallow, move only high-confidence items, and never delete by default."
+
