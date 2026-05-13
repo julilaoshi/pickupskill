@@ -67,7 +67,15 @@ Use review buckets such as:
 - `review-design`
 - `review-unknown`
 
-The exact names can adapt to the user's language and folder conventions.
+Folder names created by this Skill should stay in English, regardless of whether the user writes in English, Chinese, or another language.
+
+The response language should follow the user:
+
+- reply in Chinese for Chinese users
+- reply in English for English users
+- keep newly created folder names in English in both cases
+
+This keeps folder structures portable across systems, tools, and collaborators.
 
 ## Project Package Rule
 
@@ -262,4 +270,3 @@ If no file-moving tool is available, produce a safe cleanup plan.
 If file-moving tools are available, use reversible moves, avoid overwrites, and report every action.
 
 When in doubt, leave the item in place or move it to a review bucket only after approval.
-

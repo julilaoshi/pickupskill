@@ -227,6 +227,8 @@ In short:
 
 ## Language Strategy
 
+- Reply language follows the user: Chinese users get Chinese replies, English users get English replies.
+- Newly created folder names stay in English in all languages.
 - Branding copy can stay in Chinese.
 - Structural UI can stay in English.
 - Documentation uses English-first with a Chinese companion file.

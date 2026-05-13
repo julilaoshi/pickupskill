@@ -63,6 +63,8 @@ Suggested buckets:
 - `review-empty-folders`
 - `review-unknown`
 
+Use English names for newly created review buckets, even when the agent replies in Chinese.
+
 ## Project Package Protection
 
 Do not split a project package unless the user asks.
@@ -92,4 +94,3 @@ Examples:
 - package lockfiles
 - plugin folders
 - generated runtime caches
-
