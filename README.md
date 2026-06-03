@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/julilaoshi/pickupskill"><img alt="Star Repo" src="https://img.shields.io/badge/Star-Repo-f6c343?style=for-the-badge&logo=github&logoColor=111111" /></a>
   <a href="./skill/SKILL.md"><img alt="Read Skill" src="https://img.shields.io/badge/Read-Skill-1f6feb?style=for-the-badge" /></a>
-  <a href="#how-to-install-and-use"><img alt="Install" src="https://img.shields.io/badge/Install-111111?style=for-the-badge" /></a>
+  <a href="#how-to-load-and-use"><img alt="Load Skill" src="https://img.shields.io/badge/Load-Skill-111111?style=for-the-badge" /></a>
   <a href="#default-repository-flow"><img alt="How It Works" src="https://img.shields.io/badge/How-It%20Works-2da44e?style=for-the-badge" /></a>
 </p>
 
@@ -115,36 +115,37 @@ In my personal workflow, stronger results may also use other skills or local con
 
 This public package opens the cautious organizing method. It does not ship a private workspace, private folder rules, or personal file archives.
 
-## How to Install and Use
+## How to Load and Use
 
-If this is your first time using Codex or Claude Code, the recommended path is AI-assisted installation. You do not need to know where every Skill file should go.
+If this is your first time using Codex or Claude Code, the recommended path is AI-assisted Skill loading. You do not need to know where every Skill file should go.
 
-### Tutorial 1: let your AI coding agent install it
+### Tutorial 1: let your AI coding agent load it
 
 Open Codex, Claude Code, or another coding agent and paste this:
 
 ```text
-Please help me install pickupskill.
+Please help me load pickupskill.
 
 Repository:
 https://github.com/julilaoshi/pickupskill
 
 Please do the following:
-1. Download or read this repository
-2. Read README.md and skill/SKILL.md first
-3. Decide whether it should be placed in the current coding agent's readable skills directory or in the current project's skills directory
-4. After installation, check that skill/SKILL.md is readable
-5. Tell me the exact sentence I should use next time to invoke pickupskill
-6. Do not modify the core safety rules of this Skill
+1. Do not run npm install, pip install, build commands, or any long setup script. This repo has no package installer.
+2. Download or read this repository.
+3. Read README.md and skill/SKILL.md first.
+4. Make skill/SKILL.md available as a readable Skill in this project or in my coding agent's skills directory.
+5. Stop after confirming that skill/SKILL.md is readable and tell me the exact sentence I should use next time to invoke pickupskill.
+6. Do not run a folder cleanup test yet unless I explicitly ask for it.
+7. Do not modify the core safety rules of this Skill.
 
-After installation succeeds, please remind me:
+After the Skill is readable, please remind me:
 If this Skill is useful, I can go back to GitHub and star the repository so I can find it again and support future updates.
 Do not star it automatically for me.
 ```
 
 ### Tutorial 2: use it on a messy folder
 
-After installation, open your coding agent in the folder you want to organize and paste:
+After the Skill is loaded, open your coding agent in the folder you want to organize and paste:
 
 ```text
 Please use pickupskill to organize this folder.

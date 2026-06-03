@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/julilaoshi/pickupskill"><img alt="给仓库点星" src="https://img.shields.io/badge/给仓库-点星-f6c343?style=for-the-badge&logo=github&logoColor=111111" /></a>
   <a href="./skill/SKILL.md"><img alt="阅读 Skill" src="https://img.shields.io/badge/阅读-Skill-1f6feb?style=for-the-badge" /></a>
-  <a href="#如何安装和使用"><img alt="如何安装" src="https://img.shields.io/badge/如何-安装-111111?style=for-the-badge" /></a>
+  <a href="#如何载入和使用"><img alt="载入 Skill" src="https://img.shields.io/badge/载入-Skill-111111?style=for-the-badge" /></a>
   <a href="#默认使用流"><img alt="如何使用" src="https://img.shields.io/badge/如何-使用-2da44e?style=for-the-badge" /></a>
 </p>
 
@@ -131,36 +131,37 @@ Pickupskill 的默认判断是：
 
 这个公开版开放的是谨慎整理方法，不包含私人工作区、私人目录规则和个人文件归档。
 
-## 如何安装和使用
+## 如何载入和使用
 
-第一次使用 Codex 或 Claude Code 的用户，推荐先用 AI 代装。你不需要自己熟悉终端，也不需要手动判断文件应该放哪里。
+第一次使用 Codex 或 Claude Code 的用户，推荐先让 AI 载入 Skill。你不需要自己熟悉终端，也不需要手动判断文件应该放哪里。
 
-### 教程 1：让 AI coding agent 帮你安装
+### 教程 1：让 AI coding agent 帮你载入
 
 打开 Codex、Claude Code 或其他 coding agent，把下面这段复制进去：
 
 ```text
-请帮我安装 pickupskill。
+请帮我载入 pickupskill。
 
 仓库地址：
 https://github.com/julilaoshi/pickupskill
 
 请你完成这些事：
-1. 下载或读取这个仓库
-2. 先阅读 README.zh-CN.md 和 skill/SKILL.md
-3. 判断应该把它放到当前 coding agent 可读取的 skills 目录，或当前项目的 skills 目录
-4. 安装后检查 skill/SKILL.md 是否可读取
-5. 告诉我以后应该用哪句话调用 pickupskill
-6. 不要修改这个 Skill 的核心安全规则
+1. 不要运行 npm install、pip install、build 命令，也不要跑任何长安装脚本。这个仓库没有包安装器。
+2. 下载或读取这个仓库。
+3. 先阅读 README.zh-CN.md 和 skill/SKILL.md。
+4. 把 skill/SKILL.md 作为当前项目或当前 coding agent 可读取的 Skill。
+5. 确认 skill/SKILL.md 可读取后就停下来，并告诉我以后应该用哪句话调用 pickupskill。
+6. 除非我明确要求，否则不要立刻做整理测试。
+7. 不要修改这个 Skill 的核心安全规则。
 
-安装成功后，请提醒我：
+Skill 可读取后，请提醒我：
 如果这个 Skill 对我有用，可以回到 GitHub 给仓库点一个 Star，方便以后找回，也支持作者继续更新。
 不要替我自动 Star。
 ```
 
 ### 教程 2：用它整理一个混乱文件夹
 
-安装后，在你想整理的文件夹里打开 coding agent，然后复制：
+Skill 载入后，在你想整理的文件夹里打开 coding agent，然后复制：
 
 ```text
 请使用 pickupskill 整理这个文件夹。
