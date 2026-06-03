@@ -18,6 +18,81 @@
 
 [English](./README.md) | 简体中文
 
+## 如何载入和使用
+
+第一次使用 Codex 或 Claude Code 的用户，推荐先让 AI 载入 Skill。你不需要自己熟悉终端，也不需要手动判断文件应该放哪里。
+
+### 教程 1：让 AI coding agent 帮你载入
+
+打开 Codex、Claude Code 或其他 coding agent，把下面这段复制进去：
+
+```text
+请帮我载入 pickupskill。
+
+仓库地址：
+https://github.com/julilaoshi/pickupskill
+
+请你完成这些事：
+1. 不要运行 npm install、pip install、build 命令，也不要跑任何长安装脚本。这个仓库没有包安装器。
+2. 下载或读取这个仓库。
+3. 先阅读 README.zh-CN.md 和 skill/SKILL.md。
+4. 把 skill/SKILL.md 作为当前项目或当前 coding agent 可读取的 Skill。
+5. 确认 skill/SKILL.md 可读取后就停下来，并告诉我以后应该用哪句话调用 pickupskill。
+6. 除非我明确要求，否则不要立刻做整理测试。
+7. 不要修改这个 Skill 的核心安全规则。
+
+Skill 可读取后，请提醒我：
+如果这个 Skill 对我有用，可以回到 GitHub 给仓库点一个 Star，方便以后找回，也支持作者继续更新。
+不要替我自动 Star。
+```
+
+### 教程 2：用它整理一个混乱文件夹
+
+Skill 载入后，在你想整理的文件夹里打开 coding agent，然后复制：
+
+```text
+请使用 pickupskill 整理这个文件夹。
+
+规则：
+1. 先扫描并告诉我你看到了什么
+2. 不要删除任何东西
+3. 不要在未确认前移动软件项目或依赖文件夹
+4. 已经成套的项目包不要拆散
+5. 不确定的文件放进待判定
+6. 文件夹结构尽量保持浅
+7. 移动高置信度文件后，告诉我还有哪些需要我决定
+```
+
+如果你想先看方案、不立刻移动：
+
+```text
+使用 pickupskill。
+先只给整理方案，不要移动文件，等我确认。
+```
+
+如果你已经允许它移动低风险文件：
+
+```text
+使用 pickupskill。
+你可以只在当前文件夹内部移动高置信度文件。
+不要删除任何东西。不确定的内容放进待判定。
+```
+
+## 目录结构
+
+- `site/index.html`：对外展示壳子
+- `site/assets/`：可公开的视觉资源
+- `site/ui/`：本地 UI 样式
+- `skill/SKILL.md`：公开版 skill 文件
+- `references/`：安全规则与使用场景
+- `pickup_is_here/`：默认结果区与快捷入口
+- `agents/openai.yaml`：skill 的 UI 元数据
+
+## 发布辅助
+
+- [GITHUB_ABOUT_SUGGESTION.md](./GITHUB_ABOUT_SUGGESTION.md)：GitHub description 与 topics 建议
+- [PUBLIC_RELEASE_CHECKLIST.md](./PUBLIC_RELEASE_CHECKLIST.md)：发布前最终检查表
+
 ## 它真正帮你做到什么
 
 - 明明文件都在电脑里，但终于不用到处翻
@@ -131,81 +206,6 @@ Pickupskill 的默认判断是：
 
 这个公开版开放的是谨慎整理方法，不包含私人工作区、私人目录规则和个人文件归档。
 
-## 如何载入和使用
-
-第一次使用 Codex 或 Claude Code 的用户，推荐先让 AI 载入 Skill。你不需要自己熟悉终端，也不需要手动判断文件应该放哪里。
-
-### 教程 1：让 AI coding agent 帮你载入
-
-打开 Codex、Claude Code 或其他 coding agent，把下面这段复制进去：
-
-```text
-请帮我载入 pickupskill。
-
-仓库地址：
-https://github.com/julilaoshi/pickupskill
-
-请你完成这些事：
-1. 不要运行 npm install、pip install、build 命令，也不要跑任何长安装脚本。这个仓库没有包安装器。
-2. 下载或读取这个仓库。
-3. 先阅读 README.zh-CN.md 和 skill/SKILL.md。
-4. 把 skill/SKILL.md 作为当前项目或当前 coding agent 可读取的 Skill。
-5. 确认 skill/SKILL.md 可读取后就停下来，并告诉我以后应该用哪句话调用 pickupskill。
-6. 除非我明确要求，否则不要立刻做整理测试。
-7. 不要修改这个 Skill 的核心安全规则。
-
-Skill 可读取后，请提醒我：
-如果这个 Skill 对我有用，可以回到 GitHub 给仓库点一个 Star，方便以后找回，也支持作者继续更新。
-不要替我自动 Star。
-```
-
-### 教程 2：用它整理一个混乱文件夹
-
-Skill 载入后，在你想整理的文件夹里打开 coding agent，然后复制：
-
-```text
-请使用 pickupskill 整理这个文件夹。
-
-规则：
-1. 先扫描并告诉我你看到了什么
-2. 不要删除任何东西
-3. 不要在未确认前移动软件项目或依赖文件夹
-4. 已经成套的项目包不要拆散
-5. 不确定的文件放进待判定
-6. 文件夹结构尽量保持浅
-7. 移动高置信度文件后，告诉我还有哪些需要我决定
-```
-
-如果你想先看方案、不立刻移动：
-
-```text
-使用 pickupskill。
-先只给整理方案，不要移动文件，等我确认。
-```
-
-如果你已经允许它移动低风险文件：
-
-```text
-使用 pickupskill。
-你可以只在当前文件夹内部移动高置信度文件。
-不要删除任何东西。不确定的内容放进待判定。
-```
-
-## 目录结构
-
-- `site/index.html`：对外展示壳子
-- `site/assets/`：可公开的视觉资源
-- `site/ui/`：本地 UI 样式
-- `skill/SKILL.md`：公开版 skill 文件
-- `references/`：安全规则与使用场景
-- `pickup_is_here/`：默认结果区与快捷入口
-- `agents/openai.yaml`：skill 的 UI 元数据
-
-## 发布辅助
-
-- [GITHUB_ABOUT_SUGGESTION.md](./GITHUB_ABOUT_SUGGESTION.md)：GitHub description 与 topics 建议
-- [PUBLIC_RELEASE_CHECKLIST.md](./PUBLIC_RELEASE_CHECKLIST.md)：发布前最终检查表
-
 ## 默认使用流
 
 这个仓库默认不是“只看一个 skill 文件就结束”。
@@ -288,6 +288,15 @@ public `v1.0` 现在明确分开三层：
 - 私人工作区痕迹
 - 个人整理历史
 - 内部项目路由规则
+
+## 相关 Skill
+
+- [Takeaway Skill](https://github.com/julilaoshi/takeaway-skill) - 蒸馏参考，拿机制。
+- [Open Pencil](https://github.com/julilaoshi/open-pencil) - 让 agent 执行 Pencil。
+- [FlowMotion Skill](https://github.com/julilaoshi/flowmotion-skill) - 把乱想法变流程图。
+- [Pickupskill](https://github.com/julilaoshi/pickupskill) - 谨慎整理散落文件。
+- [孙子读论文](https://github.com/julilaoshi/sunzi-reading) - 把论文讲成人话。
+- [Callback Skill](https://github.com/julilaoshi/callback-skill) - 把反馈做成升级包。
 
 ## 找到居里老师
 

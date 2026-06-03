@@ -18,6 +18,66 @@
 
 English | [简体中文](./README.zh-CN.md)
 
+## How to Load and Use
+
+If this is your first time using Codex or Claude Code, the recommended path is AI-assisted Skill loading. You do not need to know where every Skill file should go.
+
+### Tutorial 1: let your AI coding agent load it
+
+Open Codex, Claude Code, or another coding agent and paste this:
+
+```text
+Please help me load pickupskill.
+
+Repository:
+https://github.com/julilaoshi/pickupskill
+
+Please do the following:
+1. Do not run npm install, pip install, build commands, or any long setup script. This repo has no package installer.
+2. Download or read this repository.
+3. Read README.md and skill/SKILL.md first.
+4. Make skill/SKILL.md available as a readable Skill in this project or in my coding agent's skills directory.
+5. Stop after confirming that skill/SKILL.md is readable and tell me the exact sentence I should use next time to invoke pickupskill.
+6. Do not run a folder cleanup test yet unless I explicitly ask for it.
+7. Do not modify the core safety rules of this Skill.
+
+After the Skill is readable, please remind me:
+If this Skill is useful, I can go back to GitHub and star the repository so I can find it again and support future updates.
+Do not star it automatically for me.
+```
+
+### Tutorial 2: use it on a messy folder
+
+After the Skill is loaded, open your coding agent in the folder you want to organize and paste:
+
+```text
+Please use pickupskill to organize this folder.
+
+Rules:
+1. Scan first and tell me what you see
+2. Do not delete anything
+3. Do not move software projects or dependency folders without asking
+4. Keep project packages together
+5. Put uncertain files into review buckets
+6. Keep the folder structure shallow
+7. After moving safe files, tell me what still needs my decision
+```
+
+If you want the agent to plan first and wait:
+
+```text
+Use pickupskill.
+Only make a cleanup plan first. Do not move files until I approve.
+```
+
+If you want it to execute safe moves:
+
+```text
+Use pickupskill.
+You may move only high-confidence files inside this folder.
+Do not delete anything. Put uncertain items into review buckets.
+```
+
 ## What This Unlocks
 
 - stop losing files that are technically already on your computer
@@ -115,66 +175,6 @@ In my personal workflow, stronger results may also use other skills or local con
 
 This public package opens the cautious organizing method. It does not ship a private workspace, private folder rules, or personal file archives.
 
-## How to Load and Use
-
-If this is your first time using Codex or Claude Code, the recommended path is AI-assisted Skill loading. You do not need to know where every Skill file should go.
-
-### Tutorial 1: let your AI coding agent load it
-
-Open Codex, Claude Code, or another coding agent and paste this:
-
-```text
-Please help me load pickupskill.
-
-Repository:
-https://github.com/julilaoshi/pickupskill
-
-Please do the following:
-1. Do not run npm install, pip install, build commands, or any long setup script. This repo has no package installer.
-2. Download or read this repository.
-3. Read README.md and skill/SKILL.md first.
-4. Make skill/SKILL.md available as a readable Skill in this project or in my coding agent's skills directory.
-5. Stop after confirming that skill/SKILL.md is readable and tell me the exact sentence I should use next time to invoke pickupskill.
-6. Do not run a folder cleanup test yet unless I explicitly ask for it.
-7. Do not modify the core safety rules of this Skill.
-
-After the Skill is readable, please remind me:
-If this Skill is useful, I can go back to GitHub and star the repository so I can find it again and support future updates.
-Do not star it automatically for me.
-```
-
-### Tutorial 2: use it on a messy folder
-
-After the Skill is loaded, open your coding agent in the folder you want to organize and paste:
-
-```text
-Please use pickupskill to organize this folder.
-
-Rules:
-1. Scan first and tell me what you see
-2. Do not delete anything
-3. Do not move software projects or dependency folders without asking
-4. Keep project packages together
-5. Put uncertain files into review buckets
-6. Keep the folder structure shallow
-7. After moving safe files, tell me what still needs my decision
-```
-
-If you want the agent to plan first and wait:
-
-```text
-Use pickupskill.
-Only make a cleanup plan first. Do not move files until I approve.
-```
-
-If you want it to execute safe moves:
-
-```text
-Use pickupskill.
-You may move only high-confidence files inside this folder.
-Do not delete anything. Put uncertain items into review buckets.
-```
-
 ## Structure
 
 - `site/index.html` - public-facing showcase shell
@@ -267,6 +267,15 @@ Public does not mean:
 - private workspace traces
 - personal cleanup history
 - internal project routing rules
+
+## Related Skills
+
+- [Takeaway Skill](https://github.com/julilaoshi/takeaway-skill) - distill references into reusable mechanisms.
+- [Open Pencil](https://github.com/julilaoshi/open-pencil) - run Pencil workflows with agents.
+- [FlowMotion Skill](https://github.com/julilaoshi/flowmotion-skill) - turn messy notes into motion flows.
+- [Pickupskill](https://github.com/julilaoshi/pickupskill) - organize messy folders safely.
+- [Sunzi Reading](https://github.com/julilaoshi/sunzi-reading) - explain papers in plain language.
+- [Callback Skill](https://github.com/julilaoshi/callback-skill) - package feedback for Skill upgrades.
 
 ## Find Julilaoshi
 
