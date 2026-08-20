@@ -18,6 +18,14 @@
 
 English | [简体中文](./README.zh-CN.md)
 
+## What Can This Skill Help You Do?
+
+- Inspect a folder before deciding what can be moved safely.
+- Group loose files into project packages, references, exports, and review buckets.
+- Keep uncertain items visible instead of guessing, renaming, or deleting them.
+- Protect software projects, dependency folders, and files that belong together.
+- Leave a clear summary so you can finish the remaining decisions quickly.
+
 ## Why This Repository Exists
 
 Most file cleanup tools act as if messy folders are trash piles.
@@ -93,16 +101,6 @@ Use pickupskill.
 You may move only high-confidence files inside this folder.
 Do not delete anything. Put uncertain items into review buckets.
 ```
-
-## What This Unlocks
-
-- stop losing files that are technically already on your computer
-- sort screenshots, PDFs, videos, notes, references, and exports without rushing into risky moves
-- scan loose root-level files first, because those are usually the newest dropped-in items
-- keep project packages together instead of splitting them into scattered categories
-- move uncertain files into review buckets instead of pretending every guess is correct
-- keep folders shallow so cleanup does not create a maze
-- avoid dangerous habits like deleting by default
 
 ## Start Here
 
