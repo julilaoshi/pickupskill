@@ -18,6 +18,22 @@
 
 English | [简体中文](./README.zh-CN.md)
 
+## Why This Repository Exists
+
+Most file cleanup tools act as if messy folders are trash piles.
+
+But active working folders are not trash piles. They contain drafts, exports, project packages, dependencies, references, and half-finished thoughts.
+
+Pickupskill starts from a different assumption:
+
+- scan first
+- preserve what may matter
+- move only high-confidence items
+- keep uncertain objects visible
+- make the next human decision easier
+
+This repository is shared to make that cautious organizing method reusable.
+
 ## How to Load and Use
 
 If this is your first time using Codex or Claude Code, the recommended path is AI-assisted Skill loading. You do not need to know where every Skill file should go.
@@ -124,22 +140,6 @@ It does not tidy by pretending to know everything. If something is unclear, it k
 It also tries to keep the folder shallow. No thirty-click folder maze. No default deletion. No fake confidence.
 
 For ugly or unreadable names, it can suggest clearer names only when renaming actually helps.
-
-## Why This Repository Exists
-
-Most file cleanup tools act as if messy folders are trash piles.
-
-But active working folders are not trash piles. They contain drafts, exports, project packages, dependencies, references, and half-finished thoughts.
-
-Pickupskill starts from a different assumption:
-
-- scan first
-- preserve what may matter
-- move only high-confidence items
-- keep uncertain objects visible
-- make the next human decision easier
-
-This repository is shared to make that cautious organizing method reusable.
 
 ## What This Repository Includes
 
